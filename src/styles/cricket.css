@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: Arial, sans-serif;
+    background-color: #0b1f14;
+    overflow: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+  width: 100%;
+  height: 70px;
+  background: #0b1f1f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0, 255, 150, 0.3);
+  position: relative;
+  z-index: 100;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  color: #2bff6a;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-right {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-btn {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: transparent;
+  border: 1px solid rgba(43, 255, 106, 0.6);
+  transition: all 0.3s ease;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  background: #2bff6a;
+  color: #000;
+}
+
+.hero {
+    padding: 40px 0;
+    background: linear-gradient(rgba(0, 40, 20, 0.9), rgba(0, 40, 20, 0.9)), url("https://images.unsplash.com/photo-1593766827228-8737b4534aa6?w=1200&h=600&fit=crop");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.main-title {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #00ff88;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #00ffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.media-section {
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+}
+
+.media-section h3 {
+    color: #00ff88;
+    margin-bottom: 15px;
+}
+
+.media-section iframe {
+    max-width: 100%;
+}
+
+.media-section audio {
+    width: 100%;
+}
+
+.content {
+    padding: 40px 0;
+    width: 100%;
+    background-color: #020d07;
+    box-sizing: border-box;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+}
+
+.card h2 {
+    color: #00ff88;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #00ff88;
+    padding-bottom: 10px;
+}
+
+.card b {
+    color: #00ff88;
+    font-weight: bold;
+}
+
+.card ul {
+    list-style-position: inside;
+}
+
+.card li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #000000;
+}
+
+.card ul ul {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.field-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.logout-btn {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Type Selector for Clubs/Countries */
+.type-selector {
+  max-width: 1000px;
+  margin: 30px auto 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.selector-btn {
+  background: rgba(0, 255, 136, 0.2);
+  color: #00ff88;
+  border: 2px solid #00ff88;
+  padding: 12px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.selector-btn:hover {
+  background: rgba(0, 255, 136, 0.3);
+  transform: scale(1.05);
+}
+
+.selector-btn.active {
+  background: #00ff88;
+  color: #000;
+}
+
+/* Clubs Scroll Section */
+.clubs-scroll-section {
+  max-width: 1000px;
+  margin: 0 auto 30px;
+}
+
+.clubs-scroll-section h2 {
+  color: #00ff88;
+  font-size: 24px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #00ff88;
+  padding-bottom: 10px;
+}
+
+.clubs-scroll-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 0;
+  scroll-behavior: smooth;
+}
+
+.club-logo-wrapper {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.club-logo {
+  height: 100px;
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  border: 3px solid transparent;
+}
+
+.club-logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #00ff88;
+}
+
+.club-logo.selected {
+  border-color: #00ff88;
+  box-shadow: 0 0 20px #00ff88, inset 0 0 10px rgba(0, 255, 136, 0.2);
+  transform: scale(1.15);
+}
+
+/* Clubs Cards Container */
+.clubs-cards-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.club-card {
+  display: flex !important;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.4s ease-in;
+}
+
+.club-logo-container {
+  flex-shrink: 0;
+  width: 200px;
+  height: 300px;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.club-card-logo {
+  height: 150px;
+  object-fit: contain;
+}
+
+.club-info-container {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.club-info-container h1 {
+  color: #00ff88;
+  font-size: 28px;
+  margin: 0 0 15px 0;
+  border-bottom: 2px solid #00ff88;
+  padding-bottom: 10px;
+}
+
+.club-info-container p {
+  color: #000000;
+  font-size: 15px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar styling */
+.clubs-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.clubs-scroll-container::-webkit-scrollbar-track {
+  background: rgba(0, 255, 136, 0.1);
+  border-radius: 10px;
+}
+
+.clubs-scroll-container::-webkit-scrollbar-thumb {
+  background: #00ff88;
+  border-radius: 10px;
+}
+
+.clubs-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #00ff88;
+  opacity: 0.8;
+}
